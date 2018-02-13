@@ -1,0 +1,10 @@
+﻿  Source.cpp
+d:\f21gp\boxfall\vs2015_x86\vs2015_x86\source.cpp(74): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1266): note: see declaration of '_sleep'
+d:\f21gp\boxfall\vs2015_x86\vs2015_x86\source.cpp(134): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\f21gp\boxfall\vs2015_x86\vs2015_x86\source.cpp(139): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\f21gp\boxfall\vs2015_x86\vs2015_x86\source.cpp(144): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\f21gp\boxfall\vs2015_x86\vs2015_x86\source.cpp(148): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\f21gp\boxfall\vs2015_x86\vs2015_x86\source.cpp(153): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  VS2015_x86.vcxproj -> D:\F21GP\boxFall\VS2015_x86\Debug\VS2015_x86.exe
+  VS2015_x86.vcxproj -> D:\F21GP\boxFall\VS2015_x86\Debug\VS2015_x86.pdb (Full PDB)

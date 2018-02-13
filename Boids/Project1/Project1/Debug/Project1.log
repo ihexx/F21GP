@@ -1,0 +1,6 @@
+﻿  boids.cpp
+d:\f21gp\boids\project1\project1\boids.cpp(64): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\f21gp\boids\project1\project1\boids.cpp(158): warning C4305: 'initializing': truncation from 'double' to 'const float'
+d:\f21gp\boids\project1\project1\boids.cpp(236): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Project1.vcxproj -> D:\F21GP\Boids\Project1\Debug\Project1.exe
+  Project1.vcxproj -> D:\F21GP\Boids\Project1\Debug\Project1.pdb (Partial PDB)
