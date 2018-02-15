@@ -1,4 +1,4 @@
-DEBUG_MODE = False
+DEBUG_MODE = True
 class node():
     position = [None,None]
     travelCost = None
@@ -10,7 +10,6 @@ class node():
         self.position = pos
         self.goalCost = (((pos[0]-goal[0])**2) + ((pos[1]-goal[1])**2))**0.5
         self.traversed = False
-        self.solution = None
         if parent is not None:
             self.travelCost = parent.travelCost + 1
             self.rootPath = parent.rootPath[:]
@@ -19,10 +18,12 @@ class node():
             self.rootPath = []
             self.travelCost = 0
             self.rootPath.append(self.position)
+        self.totalCost = self.travelCost + self.goalCost
         if DEBUG_MODE:
             print("DEBUG: Position",self.position)
             print("DEBUG: root",self.rootPath)
-            print("DEBUG: goalCost",self.goalCost)
+            print("DEBUG: travel Cost",self.travelCost)
+            print("DEBUG: Cost ",self.totalCost)
         
      
              
@@ -44,9 +45,12 @@ class aStar(object):
         
         while True:
             if len(priority_queue) == 0:
-                print('Done')
+                print('Path not found')
                 return
             current_node = self.topPriority(priority_queue)
+            if current_node.goalCost == 0:
+                print('Done')
+                break
             priority_queue.remove(current_node)
             current_node.traversed = True
             self.solution = current_node
@@ -75,12 +79,11 @@ class aStar(object):
             numNodes += 1
             if numNodes > len(self.grid)*len(self.grid):
                 exit()
-        print('Completed in : '+str(count)+'steps')
+        print('Completed in : '+str(numNodes)+'steps')
 
     
     
     def topPriority(self, priority_queue):
-        print("newQueue")
         lowest_cost = priority_queue[0].travelCost + priority_queue[0].goalCost
         lowest_node = priority_queue[0]
         print(lowest_cost)
@@ -91,5 +94,4 @@ class aStar(object):
                 
                 lowest_node = node
                 lowest_cost = cost
-        print("selecting",lowest_cost)
         return lowest_node
